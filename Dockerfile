@@ -12,7 +12,7 @@ RUN     apt-get -y install python-django-tagging python-simplejson python-memcac
                            python-pip gunicorn supervisor nginx-light nodejs git wget curl openjdk-7-jre build-essential python-dev
 
 RUN     pip install Twisted==11.1.0
-RUN     pip install Django==1.5.12
+RUN     pip install django
 
 
 # Install Elasticsearch
