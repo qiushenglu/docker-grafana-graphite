@@ -13,10 +13,10 @@ RUN     apt-get -y update
 RUN     apt-get -y install python-django-tagging python-simplejson python-memcache python-ldap python-cairo python-pysqlite2 python-support \
                            python-pip gunicorn supervisor nginx-light nodejs git wget curl openjdk-7-jre build-essential python-dev
 
-RUN     pip install Twisted==11.1.0
-RUN     pip install Django==1.5.12
-RUN     pip install pytz
-RUN     npm install ini chokidar
+RUN     pip install Twisted==11.1.0 -i http://pypi.douban.com/simple/
+RUN     pip install Django==1.5.12 -i http://pypi.douban.com/simple/
+RUN     pip install pytz -i http://pypi.douban.com/simple/
+RUN     npm install ini chokidar 
 
 # Checkout the stable branches of Graphite, Carbon and Whisper and install from there
 RUN     mkdir /src
